@@ -62,7 +62,6 @@ public class HashCharacterList {
 	}
 
 	private int getIndex(char ch) {
-		int numeric = Character.getNumericValue(ch);
-		return (numeric - Character.MIN_VALUE);
+		return (Character.hashCode(ch) - Character.hashCode(Character.MIN_VALUE));
 	}
 }
