@@ -25,7 +25,7 @@ package org.harshv.javap.dp;
 
 public class CoinRowProblem {
 	
-	/* procedure getmax actually solves the problem. it returns max value
+	/* A dynamic programming solution which returns max value
 	 * subject to the problem constraints.
 	 */
 	
@@ -51,17 +51,17 @@ public class CoinRowProblem {
 	}
 	
 	private static void test(String name, int[] values, int expetedResult) {
-		if (getMax(values) == expetedResult) {
-			System.out.println("Test case " + name + " successful.");
+		int actualResult = getMax(values);
+		if (actualResult == expetedResult) {
+			System.out.println("Test case " + name + " successful with result: " + actualResult);
 		} else {
-			System.out.println("Test case " + name + " failed.");
+			System.out.println("Test case " + name + " failed with result: " + actualResult);
 		}
 	}
+
 	/* procedure main is a testing method. */
 	public static void main(String args[]) {
 		test("test1", new int[] {5,1,2,10,6,2}, 17);
 		test("test2", new int[] {5,1,2,10,6}, 15);
-		
 	}
-
 }
