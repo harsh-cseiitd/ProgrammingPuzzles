@@ -25,7 +25,7 @@ package org.harshv.javap.dp;
 
 public class ChangeMakingProblem {
 
-	/* A dynamic programming solution which returns max value
+	/* A dynamic programming solution which returns minimum coins
 	 * subject to the problem constraints.
 	 */
 	
