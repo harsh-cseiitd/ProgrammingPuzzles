@@ -66,8 +66,9 @@ public class StockMaximizeProblem {
 
 	public static void main(String[] args) {
 		test("test1", new int[] {5, 3, 2}, 0);
-		test("test1", new int[] {1, 2, 100}, 197);
-		test("test1", new int[] {1, 3, 1, 2}, 3);
+		test("test2", new int[] {1, 2, 100}, 197);
+		test("test3", new int[] {1, 3, 1, 2}, 3);
+		test("test4", new int[] {1, 2, 1, 3}, 5);
 	}
 
 }
