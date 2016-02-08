@@ -36,54 +36,55 @@ public class MaximumSubarrayProblem {
 
 	public static long getMaxSumContiguousSubarray(int[] numArray) {
 		/* if input array has only one element then max sum is
-        /* that element only. */
-        if (numArray.length == 1) {
-            return numArray[0];
-        }
-        long [] maxSubArray  = new long[numArray.length];
-        maxSubArray[0] = numArray[0];
-        long maxSum = maxSubArray[0];
+		/* that element only. */
+		if (numArray.length == 1) {
+			return numArray[0];
+		}
+
+		long [] maxSubArray  = new long[numArray.length];
+		maxSubArray[0] = numArray[0];
+		long maxSum = maxSubArray[0];
         
-        /* Visit each element of the input array and keep maximum sum up to
-         * previous element. Max sum for a element is that element value If
-         * (current element + previous sum) is not positive OR that current
-         * element is negative and reducing value of (current element + previous sum).
-         * Otherwise  Max sum for a element is (current element + previous sum).
-         */
-        for (int i = 1; i < numArray.length; i++) {
-            long current  = (long) numArray[i];
-            long currentAndPreviousSum  = current + maxSubArray[i-1];
-            if ((currentAndPreviousSum <= 0) || (maxSubArray[i-1] < 0 && current > 0)) {
-                    maxSubArray[i] = current;
-            } else {
-                    maxSubArray[i] = currentAndPreviousSum ;
-            }
-            if (maxSubArray[i] > maxSum) {
-            	maxSum = maxSubArray[i];
-            }
-        }
-        return maxSum;
+		/* Visit each element of the input array and keep maximum sum up to
+		 * previous element. Max sum for a element is that element value If
+		 * (current element + previous sum) is not positive OR that current
+		 * element is negative and reducing value of (current element + previous sum).
+		 * Otherwise  Max sum for a element is (current element + previous sum).
+		 */
+		for (int i = 1; i < numArray.length; i++) {
+			long current  = (long) numArray[i];
+			long currentAndPreviousSum  = current + maxSubArray[i-1];
+			if ((currentAndPreviousSum <= 0) || (maxSubArray[i-1] < 0 && current > 0)) {
+				maxSubArray[i] = current;
+			} else {
+				maxSubArray[i] = currentAndPreviousSum ;
+			}
+			if (maxSubArray[i] > maxSum) {
+				maxSum = maxSubArray[i];
+			}
+		}
+		return maxSum;
 	}
 
 	public static long getMaxSumNonContiguousSubarray(int[] numArray) {
-        if (numArray.length == 1) {
-            return numArray[0];
-        }
-        /* if array has all negative or zero values then max value is either zero
-        /* or just least negative number. */
-        int maxValue = getMaxValue(numArray);
-        if (maxValue <= 0) {
-            return maxValue;
-        }
+		if (numArray.length == 1) {
+			return numArray[0];
+		}
+		/* if array has all negative or zero values then max value is either zero
+		/* or just least negative number. */
+		int maxValue = getMaxValue(numArray);
+		if (maxValue <= 0) {
+			return maxValue;
+		}
 
-        /* if the array has few positive numbers then pick them all, sum and return the sum */
-        long maxSum = 0;
-        for (int i = 0 ; i < numArray.length ; i++) {
-            if (numArray[i] > 0 ) {
-                 maxSum = maxSum + (long) numArray[i];
-            }
-        }
-        return maxSum;
+		/* if the array has few positive numbers then pick them all, sum and return the sum */
+		long maxSum = 0;
+		for (int i = 0 ; i < numArray.length ; i++) {
+			if (numArray[i] > 0 ) {
+				maxSum = maxSum + (long) numArray[i];
+			}	
+		}
+		return maxSum;
 	}
 
   
