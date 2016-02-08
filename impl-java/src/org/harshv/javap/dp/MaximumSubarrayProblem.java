@@ -25,13 +25,13 @@ package org.harshv.javap.dp;
 public class MaximumSubarrayProblem {
 
 	public static int getMaxValue(int[] array){  
-        int maxValue = array[0];  
-        for (int i=1; i < array.length; i++){  
-            if (array[i] > maxValue){  
-                maxValue = array[i];  
-            }  
-        }  
-       return maxValue;  
+		int maxValue = array[0];  
+		for (int i=1; i < array.length; i++){  
+			if (array[i] > maxValue){  
+				maxValue = array[i];  
+			}
+		}
+		return maxValue;
 	}
 
 	public static long getMaxSumContiguousSubarray(int[] numArray) {
