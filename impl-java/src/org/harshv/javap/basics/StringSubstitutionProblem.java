@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-/*
+ /*
  * Problem: replace input string with input pattern.
  */
 
@@ -67,5 +67,4 @@ public class StringSubstitutionProblem {
 		test ("test6", " AB CD EF GH ", ' ', "%20", "%20AB%20CD%20EF%20GH%20");
 		test ("test7", "A B C D E F G H", ' ', "%20", "A%20B%20C%20D%20E%20F%20G%20H");
 	}
-
 }
