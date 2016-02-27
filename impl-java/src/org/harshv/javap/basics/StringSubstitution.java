@@ -21,7 +21,7 @@
 
 package org.harshv.javap.basics;
 
-public class StringSubstitutionProblem {
+public class StringSubstitution {
 
 	/*
 	 * First solution: In traditional way using char array.
