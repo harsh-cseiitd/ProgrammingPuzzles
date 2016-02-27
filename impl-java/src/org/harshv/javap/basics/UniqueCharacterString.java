@@ -21,17 +21,17 @@
 
 package org.harshv.javap.basics;
 
-import org.harshv.javap.utils.CharFrequencyCountList;
+import java.util.HashMap;
 
 public class UniqueCharacterString {
  
 	private static boolean computeWithExtraStorage(String inputStr) {
-		CharFrequencyCountList hList = new CharFrequencyCountList();
+		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 		for (int i = 0; i < inputStr.length(); i++) {
-			if (hList.exist(inputStr.charAt(i))) {
+			if (map.containsKey(inputStr.charAt(i))) {
 				return false;
 			} else {
-				hList.incrementCount(inputStr.charAt(i));
+				map.put(inputStr.charAt(i), 0);
 			}			
 		}
 		return true;
