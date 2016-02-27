@@ -15,15 +15,23 @@
  */
 
  /*
- * Problem: replace input string with input pattern.
+ * Problem: In input string, replace all occurrences of input character with 
+ * given pattern.
  */
 
 package org.harshv.javap.basics;
 
 public class StringSubstitutionProblem {
 
-	public static String subsitute(String str, char candidate, String pattern) {
+	/*
+	 * First solution: In traditional way using char array.
+	 */
+	public static String subsitute1(String str, char candidate, String pattern) {
 		int charCount = 0;
+		/*
+		 * First count number of occurrences of given character so that we can
+		 * judge the required space for expansion.
+		 */
 		for (int i = 0; i <str.length(); i++) {
 			if (str.charAt(i) == candidate) {
 				charCount++;
@@ -48,13 +56,38 @@ public class StringSubstitutionProblem {
 		}
 		return new String(resultStr);
 	}
+	
+	/*
+	 * Second solution: using StringBuilder.
+	 */
+	public static String subsitute2(String str, char candidate, String pattern) {
+		
+		StringBuilder sb = new StringBuilder();
+		for (int j = 0 ; j < str.length(); j++) {
+			if (str.charAt(j) == candidate) {
+				for (int p = 0 ; p < pattern.length(); p++) {
+					sb.append(pattern.charAt(p));
+				}
+			} else {
+				sb.append(str.charAt(j));
+			}
+		}
+		return sb.toString();
+	}
 
 	public static void test (String testname, String inputStr, char ch, String pattern, String expectedResult) {
-		String result = subsitute(inputStr, ch, pattern);
-		if (result.equals(expectedResult)) {
-			System.out.println(testname + " passed with result: " + result);
+		String result1 = subsitute1(inputStr, ch, pattern);
+		if (result1.equals(expectedResult)) {
+			System.out.println(testname + " with approach1 passed with result: " + result1);
 		} else  {
-			System.out.println(testname + " failed with result: " + result);
+			System.out.println(testname + " with approach1 failed with result: " + result1);
+		}
+		
+		String result2 = subsitute2(inputStr, ch, pattern);
+		if (result2.equals(expectedResult)) {
+			System.out.println(testname + " with approach2 passed with result: " + result2);
+		} else  {
+			System.out.println(testname + " with approach2 failed with result: " + result2);
 		}
 	}
 
