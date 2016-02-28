@@ -21,16 +21,16 @@
  * Compressed String: x2y4z1e2p8 output: x2y4z1e2p8
  * Input string: xyzabcef
  * Compressed String: x1y1z1a1b1c1e1f1  output: xyzabcef
- * If length of compressed string is more than origional 
- * string, return origional string.
+ * If length of compressed string is more than original 
+ * string, return original string.
  */
 
 package org.harshv.javap.basics;
 
 public class BasicStringCompression {
 	
-	/*
-	 * This solution returns compressed form of origional string.
+	/**
+	 * This solution returns compressed form of original string.
 	 * Time complexity: Linear time (length of input string).
 	 * Space Complexity: Linear space (length of result string).
 	 */
