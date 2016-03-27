@@ -16,9 +16,11 @@
 
 /*
  * Problem: Remove duplicate characters from input string.
+ * 
+ * Junit: test/junit/basics/StringDuplicateRemovalTest.java
  */
 
-package org.harshv.javap.basics;
+package javap.basics;
 
 import java.util.HashMap;
 
@@ -59,23 +61,4 @@ public class StringDuplicateRemoval {
 		return sb.toString();
 	}
 
-	public static void test (String testname, String inputStr, String expectedResult) {
-		String result = getUniqueCharString(inputStr);
-		if (result.equals(expectedResult)) {
-			System.out.println(testname + " passed with result: " + result);
-		} else  {
-			System.out.println(testname + " failed with result: " + result);
-		}
-	}
-
-	public static void main(String[] args) {
-		test ("test1", "abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz");
-		test ("test2", "0123456789", "0123456789");
-		test ("test2", "aaabbbcccdddeeffgghhiijjkkllooppmmnnbbhhss", "abcdefghijklopmnbhs");
-		test ("test3", "abcedf", "abcedf");
-		test ("test4", "aaaaa", "a");
-		test ("test5", "alphabet", "alphabet");
-		test ("test6", "", "");
-		test ("test7", "harsh vardhan", "hars vdn");
-	}
 }
