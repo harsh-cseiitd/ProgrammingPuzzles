@@ -38,6 +38,6 @@ public class DecideAnagramsTest {
 	
 	private void testHelper(String testname, String inputStr1, String inputStr2, boolean expectedResult) {
 		boolean actual = DecideAnagrams.decideAnagrams(inputStr1, inputStr2);
-		assertEquals(testname, actual, expectedResult);
+		assertEquals(testname, expectedResult, actual);
 	}
 }

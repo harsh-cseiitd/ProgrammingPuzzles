@@ -36,7 +36,7 @@ public class BasicStringCompressionTest {
 	
 	private void testHelper(String name, String input, String expectedResult) {
 		String actual = BasicStringCompression.getBasicCompressedString(input);
-		assertEquals(name, actual, expectedResult);
+		assertEquals(name, expectedResult, actual);
 	}
 
 }
