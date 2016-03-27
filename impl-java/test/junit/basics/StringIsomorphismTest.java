@@ -39,5 +39,4 @@ public class StringIsomorphismTest {
 		boolean actual = StringIsomorphism.decideIsomorphism(inputStr1, inputStr2);
 		assertEquals(testname, expectedResult, actual);
 	}
-
 }
