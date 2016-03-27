@@ -18,7 +18,7 @@
  * Problem: Check is two input strings are anagrams or not!
  */
 
-package org.harshv.javap.basics;
+package javap.basics;
 
 import java.util.HashMap;
 
@@ -70,26 +70,5 @@ public class DecideAnagrams {
 			return true;
 		}
 		return false;
-	}
-
-	public static void test (String testname, String inputStr1, String inputStr2, boolean expectedResult) {
-		boolean result = decideAnagrams(inputStr1, inputStr2);
-		if (result == expectedResult) {
-			System.out.println(testname + " passed with result: " + result);
-		} else  {
-			System.out.println(testname + " failed with result: " + result);
-		}
-	}
-
-	public static void main(String[] args) {
-		test ("test1", "army", "mary", true);
-		test ("test2", "abcdef", "abcdef", true);
-		test ("test3", "abcdef", "fedcba", true);
-		test ("test4", "word", "wrdo", true);
-		test ("test5", "stop", "tops", true);
-		test ("test6", "boat", "btoa", true);
-		test ("test7", "fill", "fil", false);
-		test ("test8", "ccc", "ccccccc", false);
-		test ("test9", "sleep", "slep", false);
 	}
 }

@@ -25,7 +25,7 @@
  * string, return original string.
  */
 
-package org.harshv.javap.basics;
+package javap.basics;
 
 public class BasicStringCompression {
 	
@@ -65,24 +65,5 @@ public class BasicStringCompression {
 			return sb.toString();
 		}
 		return inputStr;
-	}
-
-	public static void test (String testname, String inputStr1, String expectedResult) {
-		String result = getBasicCompressedString(inputStr1);
-		if (result.equals(expectedResult)) {
-			System.out.println(testname + " passed with result: " + result);
-		} else  {
-			System.out.println(testname + " failed with result: " + result);
-		}
-	}
-
-	public static void main(String[] args) {
-		test ("test1", "xxyyyyzeepppppppp", "x2y4z1e2p8");
-		test ("test2", "xyzabcef", "xyzabcef");
-		test ("test3", "abcdef", "abcdef");
-		test ("test4", "aaaaaaaabb", "a8b2");
-		test ("test5", "abbbbbbbbbbc", "a1b10c1");
-		test ("test6", "abcdeeeeeeeeeeee", "a1b1c1d1e12");
-		test ("test7", "aaaaaaaabcdaaaaaaaa", "a8b1c1d1a8");
 	}
 }
