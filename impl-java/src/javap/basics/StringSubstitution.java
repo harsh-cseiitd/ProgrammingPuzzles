@@ -17,9 +17,11 @@
  /*
  * Problem: In input string, replace all occurrences of input character with 
  * given pattern.
+ * 
+ * Junit: test/junit/basics/StringSubstitutionTest.java
  */
 
-package org.harshv.javap.basics;
+package javap.basics;
 
 public class StringSubstitution {
 
@@ -73,31 +75,5 @@ public class StringSubstitution {
 			}
 		}
 		return sb.toString();
-	}
-
-	public static void test (String testname, String inputStr, char ch, String pattern, String expectedResult) {
-		String result1 = subsitute1(inputStr, ch, pattern);
-		if (result1.equals(expectedResult)) {
-			System.out.println(testname + " with approach1 passed with result: " + result1);
-		} else  {
-			System.out.println(testname + " with approach1 failed with result: " + result1);
-		}
-		
-		String result2 = subsitute2(inputStr, ch, pattern);
-		if (result2.equals(expectedResult)) {
-			System.out.println(testname + " with approach2 passed with result: " + result2);
-		} else  {
-			System.out.println(testname + " with approach2 failed with result: " + result2);
-		}
-	}
-
-	public static void main(String[] args) {
-		test ("test1", "AB CD EF GH", ' ', "X", "ABXCDXEFXGH");
-		test ("test2", " AB CD EF GH ", ' ', "X", "XABXCDXEFXGHX");
-		test ("test3", "A B C D E F G H", ' ', "Y", "AYBYCYDYEYFYGYH");
-		test ("test4", "  ", ' ', "Y", "YY");
-		test ("test5", "AB CD EF GH", ' ', "%20", "AB%20CD%20EF%20GH");
-		test ("test6", " AB CD EF GH ", ' ', "%20", "%20AB%20CD%20EF%20GH%20");
-		test ("test7", "A B C D E F G H", ' ', "%20", "A%20B%20C%20D%20E%20F%20G%20H");
 	}
 }
