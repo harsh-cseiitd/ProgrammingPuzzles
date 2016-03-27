@@ -38,5 +38,4 @@ public class BasicStringCompressionTest {
 		String actual = BasicStringCompression.getBasicCompressedString(input);
 		assertEquals(name, expectedResult, actual);
 	}
-
 }
