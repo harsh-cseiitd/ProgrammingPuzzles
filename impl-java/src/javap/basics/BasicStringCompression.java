@@ -23,6 +23,8 @@
  * Compressed String: x1y1z1a1b1c1e1f1  output: xyzabcef
  * If length of compressed string is more than original 
  * string, return original string.
+ * 
+ * Junit: test/junit/basics/BasicStringCompressionTest.java
  */
 
 package javap.basics;

@@ -16,6 +16,8 @@
 
 /*
  * Problem: Check is two input strings are anagrams or not!
+ * 
+ * Junit: test/junit/basics/DecideAnagramsTest.java
  */
 
 package javap.basics;
