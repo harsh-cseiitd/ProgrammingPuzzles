@@ -23,9 +23,11 @@
  * possible mapping, we get second string.
  * 
  * Task is to determine if two input strings are isomorphic or not.
+ * 
+ * Junit: test/junit/basics/StringIsomorphismTest.java
  */
 
-package org.harshv.javap.basics;
+package javap.basics;
 
 import java.util.HashMap;
 
@@ -62,26 +64,6 @@ public class StringIsomorphism {
 			return true;
 		}
 		return false;
-	}
-
-	public static void test (String testname, String inputStr1, String inputStr2, boolean expectedResult) {
-		boolean result = decideIsomorphism(inputStr1, inputStr2);
-		if (result == expectedResult) {
-			System.out.println(testname + " passed with result: " + result);
-		} else  {
-			System.out.println(testname + " failed with result: " + result);
-		}
-	}
-
-	public static void main(String[] args) {
-		test ("test1", "abcdeeep", "xyzwrrrn", true);
-		test ("test2", "aab", "xxy", true);
-		test ("test3", "abcdef", "fedcba", true);
-		test ("test4", "word", "xyzw", true);
-		test ("test5", "1223334444", "abbcccdddd", true);
-		test ("test6", "aaaabaaaa", "xxxxyzzzz", false);
-		test ("test7", "kill", "bill", true);
-		test ("test8", "India", "Pakistan", false);
 	}
 
 }
