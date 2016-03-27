@@ -25,16 +25,16 @@ public class BasicStringCompressionTest {
 
 	@Test
 	public void testStingCompression() {
-		testHelper("test1", "xxyyyyzeepppppppp", "x2y4z1e2p8");
-		testHelper("test2", "xyzabcef", "xyzabcef");
-		testHelper("test3", "abcdef", "abcdef");
-		testHelper("test4", "aaaaaaaabb", "a8b2");
-		testHelper("test5", "abbbbbbbbbbc", "a1b10c1");
-		testHelper("test6", "abcdeeeeeeeeeeee", "a1b1c1d1e12");
-		testHelper("test7", "aaaaaaaabcdaaaaaaaa", "a8b1c1d1a8");
+		testOneInstance("test1", "xxyyyyzeepppppppp", "x2y4z1e2p8");
+		testOneInstance("test2", "xyzabcef", "xyzabcef");
+		testOneInstance("test3", "abcdef", "abcdef");
+		testOneInstance("test4", "aaaaaaaabb", "a8b2");
+		testOneInstance("test5", "abbbbbbbbbbc", "a1b10c1");
+		testOneInstance("test6", "abcdeeeeeeeeeeee", "a1b1c1d1e12");
+		testOneInstance("test7", "aaaaaaaabcdaaaaaaaa", "a8b1c1d1a8");
 	}
 	
-	private void testHelper(String name, String input, String expectedResult) {
+	private void testOneInstance(String name, String input, String expectedResult) {
 		String actual = BasicStringCompression.getBasicCompressedString(input);
 		assertEquals(name, expectedResult, actual);
 	}

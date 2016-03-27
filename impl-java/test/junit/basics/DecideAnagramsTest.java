@@ -25,18 +25,18 @@ public class DecideAnagramsTest {
 
 	@Test
 	public void testAnagrams() {
-		testHelper ("test1", "army", "mary", true);
-		testHelper ("test2", "abcdef", "abcdef", true);
-		testHelper ("test3", "abcdef", "fedcba", true);
-		testHelper ("test4", "word", "wrdo", true);
-		testHelper ("test5", "stop", "tops", true);
-		testHelper ("test6", "boat", "btoa", true);
-		testHelper ("test7", "fill", "fil", false);
-		testHelper ("test8", "ccc", "ccccccc", false);
-		testHelper ("test9", "sleep", "slep", false);
+		testOneInstance("test1", "army", "mary", true);
+		testOneInstance("test2", "abcdef", "abcdef", true);
+		testOneInstance("test3", "abcdef", "fedcba", true);
+		testOneInstance("test4", "word", "wrdo", true);
+		testOneInstance("test5", "stop", "tops", true);
+		testOneInstance("test6", "boat", "btoa", true);
+		testOneInstance("test7", "fill", "fil", false);
+		testOneInstance("test8", "ccc", "ccccccc", false);
+		testOneInstance("test9", "sleep", "slep", false);
 	}
 	
-	private void testHelper(String testname, String inputStr1, String inputStr2, boolean expectedResult) {
+	private void testOneInstance(String testname, String inputStr1, String inputStr2, boolean expectedResult) {
 		boolean actual = DecideAnagrams.decideAnagrams(inputStr1, inputStr2);
 		assertEquals(testname, expectedResult, actual);
 	}

@@ -25,17 +25,17 @@ public class StringIsomorphismTest {
 
 	@Test
 	public void testStingIsomorphism() {
-		testHelper("test1", "abcdeeep", "xyzwrrrn", true);
-		testHelper("test2", "aab", "xxy", true);
-		testHelper("test3", "abcdef", "fedcba", true);
-		testHelper("test4", "word", "xyzw", true);
-		testHelper("test5", "1223334444", "abbcccdddd", true);
-		testHelper("test6", "aaaabaaaa", "xxxxyzzzz", false);
-		testHelper("test7", "kill", "bill", true);
-		testHelper("test8", "India", "Pakistan", false);
+		testOneInstance("test1", "abcdeeep", "xyzwrrrn", true);
+		testOneInstance("test2", "aab", "xxy", true);
+		testOneInstance("test3", "abcdef", "fedcba", true);
+		testOneInstance("test4", "word", "xyzw", true);
+		testOneInstance("test5", "1223334444", "abbcccdddd", true);
+		testOneInstance("test6", "aaaabaaaa", "xxxxyzzzz", false);
+		testOneInstance("test7", "kill", "bill", true);
+		testOneInstance("test8", "India", "Pakistan", false);
 	}
 	
-	private void testHelper(String testname, String inputStr1, String inputStr2, boolean expectedResult) {
+	private void testOneInstance(String testname, String inputStr1, String inputStr2, boolean expectedResult) {
 		boolean actual = StringIsomorphism.decideIsomorphism(inputStr1, inputStr2);
 		assertEquals(testname, expectedResult, actual);
 	}

@@ -25,16 +25,16 @@ public class StringDuplicateRemovalTest {
 
 	@Test
 	public void testStingDuplicateRemoval() {
-		testHelper("test1", "abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz");
-		testHelper("test2", "0123456789", "0123456789");
-		testHelper("test3", "abcedf", "abcedf");
-		testHelper("test4", "aaaaa", "a");
-		testHelper("test5", "alphabet", "alphbet");
-		testHelper("test6", "", "");
-		testHelper("test7", "harsh vardhan", "hars vdn");
+		testOneInstance("test1", "abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz");
+		testOneInstance("test2", "0123456789", "0123456789");
+		testOneInstance("test3", "abcedf", "abcedf");
+		testOneInstance("test4", "aaaaa", "a");
+		testOneInstance("test5", "alphabet", "alphbet");
+		testOneInstance("test6", "", "");
+		testOneInstance("test7", "harsh vardhan", "hars vdn");
 	}
 	
-	private void testHelper(String testname, String inputStr, String expectedResult) {
+	private void testOneInstance(String testname, String inputStr, String expectedResult) {
 		String actual = StringDuplicateRemoval.getUniqueCharString(inputStr);
 		assertEquals(testname, expectedResult, actual);
 	}
