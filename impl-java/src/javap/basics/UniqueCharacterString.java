@@ -18,7 +18,7 @@
  * Problem: decide if an input string is made up with unique characters
  * or not.
  * 
- * Junit:
+ * Junit: test/junit/basics/UniqueCharacterStringTest.java
  */
 
 package javap.basics;
