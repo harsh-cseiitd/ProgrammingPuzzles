@@ -16,9 +16,11 @@
 
 /*
  * Problem: Reverse the input string.
+ * 
+ * Junit: test/junit/basics/StringReverseTest.java
  */
 
-package org.harshv.javap.basics;
+package javap.basics;
 
 public class StringReverse {
 
@@ -43,26 +45,5 @@ public class StringReverse {
 			indexFromLast--;
 		}
 		return new String(array);
-	}
-
-	public static void test (String testname, String inputStr) {
-		String result = reverse(inputStr);
-		if (new StringBuilder(inputStr).reverse().toString().equals(result)) {
-			System.out.println(testname + " passed with result: " + result);
-		} else  {
-			System.out.println(testname + " failed with result: " + result);
-		}
-	}
-
-	public static void main(String[] args) {
-		test ("test1", "abcdefghijklmnopqrstuvwxyz");
-		test ("test2", "0123456789");
-		test ("test2", "aaabbbcccdddeeffgghhiijjkkllooppmmnnbbhhss");
-		test ("test3", "abcedf");
-		test ("test4", "aaaaa");
-		test ("test5", "alphabet");
-		test ("test6", "");
-		test ("test7", "harsh vardhan");
-
 	}
 }
